@@ -33,14 +33,14 @@ en la carpeta dist. Copiamos esos archivos y los pegamos en /opt/lampp/htdocs
 Nos situamos en /opt/lampp/htdocs , y creamos un archivo cuyo nombre es .htaccess
 	y el contenido sera:
 
-<IfModule mod_rewrite.c>	
-	RewriteEngine On
-	RewriteBase /
-	RewriteRule ^index\.html$ - [L]
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule . index.html [L]
-</IfModule>
+	<IfModule mod_rewrite.c>	
+		RewriteEngine On
+		RewriteBase /
+		RewriteRule ^index\.html$ - [L]
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule . index.html [L]
+	</IfModule>
 
 - Paso 5:
 
