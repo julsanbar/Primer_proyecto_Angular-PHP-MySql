@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="barra">
+<!--<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="barra">-->
+  
+  <a class="navbar-brand" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/home">
+    <img src="../../../favicon.ico" width="30" height="30" class="d-inline-block align-top">
+    Inicio
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown bg-dark" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Productos
+        </a>
+        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item text-light bg-dark" routerLink="/domotica">Domótica</a>
+          
+          <a class="dropdown-item text-light bg-dark" routerLink="/smartHome">SmartHome</a>
+        </div>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        
+        <a class="nav-link" routerLink="/acerca">Acerca de</a>
+      </li>
+    </ul>
+    <nav class="navbar navbar-dark bg-dark">
+
+        <!-- Verificamos si hay un usuario en la sesión en tal caso se printea un botón de cerrar sesión en lugar de inciar -->
+        <!-- DIRECTIVA NGIF -->
+        <div *ngIf="gestionSesion.devuelveNombreSesion() !== null; else nulo">
+
+            <!-- EVENT BINDING -->
+            <button class="btn btn-outline-danger" type="button" (click)="gestionSesion.cerrarSesion()">Cerrar Sesión</button>
+
+        </div>
+
+          <ng-template #nulo>
+
+            <!-- EVENT BINDING -->
+            <button class="btn btn-outline-primary" id="btnInicio" type="button" (click)="redirecciona()">Iniciar Sesión</button>
+
+          </ng-template>
+
+    </nav>
+  </div>
+</nav>

@@ -1,0 +1,106 @@
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 p-5">
+        <form [formGroup]="registroForm" (ngSubmit)="enviar()" errorTailor>
+
+            <h4 class="text-center">Area de cliente</h4>
+            
+            <label for="inputEmail">Correo Electrónico</label>
+            <input type="email" id="inputEmail" class="form-control" formControlName="email" placeholder="email@email.com" [controlErrorsTpl]="errorEmail">
+            <div id="emailError" *ngIf="registroForm.get('email')?.hasError('email') && registroForm.get('email')?.touched">
+                Error en el email
+            </div>
+
+            <label for="inputPassword" class="mt-4">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control" formControlName="password" [controlErrorsTpl]="campoPass" placeholder="*0Tes3As">
+            <ng-container *ngTemplateOutlet="passwordError;context:{error:registroForm.get('password')?.errors}"></ng-container>
+
+            <!-- El paquete nos da la opción de customizar el error mediante template -->
+            <!-- <label for="terms">¿Aceptá los términos de tratamiento de datos?</label>
+            <input type="checkbox" id="terms" class="form-control" formControlName="terms"
+                [controlErrorsTpl]="checkError">-->
+            
+            <hr>
+            <button [disabled]="registroForm.invalid" type="submit" class="btn btn-primary">Iniciar</button>
+            <button type="reset" class="btn btn-danger ml-4">Limpiar</button>
+        </form>
+    </div>
+</div>
+
+<!--<div>
+    VALIDO: {{registroForm.valid | json}}
+</div>-->
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 pb-3">
+
+        <h4 class="text-center">¿No tienes cuenta?</h4>
+        
+        <br>
+
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/crear" class="offset-md-5 btn btn-success btn-lg" role="button">¡Crear!</a>
+
+    </div>
+</div>
+
+<!--<div>
+    {{registroForm.get('password')?.errors | json}}
+</div>-->
+
+<!--LOS TEMPLATES CUSTOM NO TIENEN let-error let-text-->
+<!--  
+<ng-template let-error="error" #custom>
+
+</ng-template>
+-->
+<!--DEBEMOS IR A DONDE QUERRAMOS CONTROL EL ERROR Y 
+CREAR UN 
+le pasamos las variables de contexto error y text ya que aquí
+no las tenemos y se definen en el container para el template
+<ng-container *ngTempLateOutlet="custom;context:{error:registroForm.get('password')?.errors}">
+</ng-container>
+-->
+
+
+<!-- TEMPLATES ERRORES -->
+
+<!--** CONTRASEÑA **-->
+<ng-template let-error="error" #passwordError>
+    
+    <div *ngIf="error?.pattern" id="errorPass">
+
+        <!--<i>Incorrecto {{error?.pattern?.requiredPattern}}</i>-->
+        <ul>
+            <li>Minimo 8 y maximo 15 carácteres.</li>
+            <li>Al menos una mayúscula, una minuscula, un caracter especial y un dígito.</li>
+            <li>No debe tener espacios en blanco</li>
+        </ul>
+
+    </div>
+
+</ng-template>
+<ng-template let-error let-text="text" #campoPass>
+    
+    <div *ngIf="error?.required" id="campoPass">
+
+        <p class="text-center">Campo obligatorio</p>
+
+    </div>
+
+</ng-template>
+
+<!--** EMAIL **-->
+<ng-template let-error let-text="text" #errorEmail>
+
+    <div *ngIf="error?.required" id="campoError">
+
+        <p class="text-center">Campo obligatorio</p>
+
+    </div>
+
+</ng-template>
+
+<!--<ng-template let-error let-text="text" #checkError>
+    {{error | json}} {{text}}
+
+</ng-template>-->

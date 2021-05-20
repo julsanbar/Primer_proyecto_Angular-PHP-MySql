@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="pie">
+    <div class="col-6">
+
+        <p class="text-left pt-1" id="fechaPie">
+            <!-- Pipe Date, Uppercase -->
+            {{ciudad | uppercase}}, {{fecha | date:'dd-MM-yyyy' | uppercase}} a las {{fecha | date:'H:m'}}
+        </p>
+    
+    </div>
+
+    <div class="col-6">
+
+        <p class="text-right mr-3" id="usuarioPie">
+            <!-- Nombre del usuario mendiante el control de sessionStorage -->
+            <!-- Pipe PropioUsuarioActual , titlecase -->
+            Hola!! {{usuario | usuarioActual | titlecase}}
+        </p>
+                
+    </div>
+
+</nav>

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#carousel{
+
+    height: 27rem;
+}
+
+#carousel>.carousel-inner>div>img{
+
+    height: 27rem;
+
+}
+

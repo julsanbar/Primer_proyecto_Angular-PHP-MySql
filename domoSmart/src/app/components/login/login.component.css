@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*INDICAMOS QUE NOS PINTEN EL BORDE EN ROJO SIEMPRE
+QUE SEA INVÁLIDO Y HAYA SIDO TOCADO (EVENT BLUR)*/
+input.ng-invalid.ng-touched{
+
+    border: solid 2px rgba(255, 99, 71, 0.644);
+
+}
+
+input.ng-valid.ng-dirty{
+
+    border: solid 2px rgb(59, 167, 59);
+    
+}
+
+#errorPass,#campoPass,#campoError,#errorLogin,#emailError{
+
+    list-style-type: circle;
+    background: rgba(253, 213, 213, 0.788);
+    border: solid 2px tomato;
+    width: 300px;
+    height: auto;
+
+}

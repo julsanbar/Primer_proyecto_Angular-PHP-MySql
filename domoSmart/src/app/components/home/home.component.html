@@ -1,0 +1,72 @@
+<!-- Carousel imagenes -->
+<div class="row mt-2 mb-4">
+    
+    <div class="col-12 mt-2 mb-2">
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner border border-dark rounded">
+
+              <div class="carousel-item active">
+                <img class="d-block w-100" [src]="'/assets/imgs/carousel/img1.jpeg'" alt="Primera imagen">
+              </div>
+
+              <div class="carousel-item">
+                <img class="d-block w-100" [src]="'/assets/imgs/carousel/img2.png'" alt="Segunda imagen">
+              </div>
+              
+            </div>
+
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+
+        </div>
+
+    </div>
+    
+</div>
+
+<!-- Columnas  -->
+<div class="row mb-4">
+    
+    <div class="col-6">
+        
+        <div class="card border-dark rounded text-light bg-dark">
+            <div class="card-body">
+              <h5 class="card-title text-center">¿Qué es la {{primeraColumna}}?</h5>
+              <p class="card-text">
+                La domótica es un conjunto de tecnologías aplicadas al control y a la automatización inteligente de nuestra casa, la cual nos permite llevar una gestión más eficiente del uso y de la energía utilizada, también nos aporta una mayor seguridad y por último y no menos importante, mucho más confort en el día a día. Además de una perfecta comunicación entre el usuario y el sistema.
+                <br>
+                Gracias a unos sensores y entradas, un sistema domótico, capta información y la procesa, para poder emitir unas ordenes específicas para conseguir una mejor gestión de nuestro hogar y de nuestro día a día.
+                
+            </p>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="col-6">
+        
+        <div class="card border-dark rounded text-light bg-dark">
+            <div class="card-body">
+              <h5 class="card-title text-center">¿Qué es {{segundaColumna}}?</h5>
+              <p class="card-text">
+                Desde hace décadas el ser humano sueña con casas inteligentes y autónomas que realicen todas las tareas del hogar por sí mismas. Este concepto de casa domótica ha devenido en Smarthome, un neologismo que da nombre a algo que llevamos años imaginando. Mucho se ha escrito y hablado sobre los hogares inteligentes. 
+                <br>
+                Desde el cine hasta publicaciones de decoración, la domótica se ha ido abriendo un hueco en nuestras mentes como una revolución, el futuro. 
+                <br>
+                Hogares de diseño en los que las luces se encienden al entrar y la calefacción se encendió hace rato para recibirnos con un cálido abrazo.
+              </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

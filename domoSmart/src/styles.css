@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+
+    background: rgba(37, 36, 36, 0.301);
+    font-family: 'Noto Sans SC', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-size: auto;
+    
+}

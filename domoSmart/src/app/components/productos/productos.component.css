@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+table{
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.texto{
+
+    padding-top: 2rem;
+    padding-left: 2rem;
+
+}
+
+img{
+    
+    border-radius: 2rem 2rem;
+    width: 500px;
+    height: 300px;
+
+}
+
+.visible{
+
+    visibility: visible;
+    display: block;
+
+}
+
+.oculto{
+
+    visibility: hidden;
+    display: none;
+
+}
+
+li,ul{
+    
+    list-style: none;
+
+}

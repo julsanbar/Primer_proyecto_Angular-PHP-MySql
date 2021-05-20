@@ -1,0 +1,170 @@
+
+<div class="row">
+    <div class="col-12">
+        
+        <table class="table" 
+            [ngClass]="{visible: localizacionDomotica, oculto: !localizacionDomotica}">
+            
+            <tbody>
+
+                <tr>
+                    <td scope="row">
+                        <img src="../../../assets/imgs/domotica/domo1.jpg">
+                    </td>
+                    <td class="texto">
+                        <div class="card border-dark rounded text-light bg-dark">
+                            <div class="card-body">
+                            <h5 class="card-title text-center">
+                                Cámara IP POE AVTECH IP MJEG 2MP IR Bullet (3.8mm)
+                            </h5>
+                            <ul class="card-text" *ngFor="let detalle of detallesDomo1">
+                                <li>
+                                    {{detalle}}
+                                </li>
+                            </ul>
+                            <p class="card-footer text-center">
+                                {{159.99 | euro}}
+                            </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td scope="row" class="texto">
+                        <div class="card border-dark rounded text-light bg-dark">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    Videoportero IP Doorbird empotrable de acero inoxidable con tres botones conectado a internet D2103V
+                                </h5>
+                                <p class="card-text">
+                                    La nueva gama de Videoportero IP Doorbird de acero inoxidable cepillado con montaje empotrado y 3 
+                                    botones de llamada para 2 viviendas u oficinas diferentes, compartiendo la misma instalación 
+                                    física para estar siempre conectado. Doorbird es un sistema de videoportero IP conectado que te 
+                                    permite atenderlo en casa o en cualquier parte del mundo, sin perder la llamada de ningún visitante 
+                                    que además integra RFID. Modelo D2103V para encastrar creado en Alemania.
+                                </p>
+                                <p class="card-footer text-center">
+                                    {{755.00 | euro}}
+                                </p>
+                            </div>
+                        </div>    
+                    </td>
+                    <td>
+                        <img src="../../../assets/imgs/domotica/domo2.jpg">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td scope="row">
+                        <img src="../../../assets/imgs/domotica/domo3.jpg">
+                    </td>
+                    <td class="texto">
+                        <div class="card border-dark rounded text-light bg-dark">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    Pasarela IP Home Center 3 de Fibaro Z-Wave - Zigbee - Nice y BT
+                                </h5>
+                                <p class="card-text">
+                                    El FIBARO Home Center 3 es el controlador domótico para la automatización 
+                                    del hogar con las tecnologías más avanzadas del mundo para la gestión 
+                                    intuitiva del hogar, la oficina o pequeños hoteles. Dispone de tecnologías 
+                                    de radio Z-Wave Plus, Zigbee, Nice y Bluetooth
+                                </p>
+                                <p class="card-footer text-center">
+                                    {{599.05 | euro}}
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <table class="table" 
+            [ngClass]="{visible: !localizacionDomotica, oculto: localizacionDomotica}">
+            
+            <tbody>
+
+                <tr>
+                    <td class="texto">
+                        <div class="card border-dark rounded text-light bg-dark">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    Cecotec Conga 6090 Ultra Robot Aspirador
+                                </h5>
+                                <p class="card-text">
+                                    Robot aspirador con mapeo láser profesional 4 en 1: barre, aspira, pasa 
+                                    la mopa y friega el suelo de forma simultánea gracias a su tanque mixto 
+                                    para sólidos y líquidos. Limpia la totalidad de la superficie recorrida 
+                                    de forma eficiente, ordenada e inteligente con Wi-Fi y App.
+                                </p>
+                                <p class="card-footer text-center">
+                                    {{499.01 | euro}}
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td scope="row">
+                        <img src="../../../assets/imgs/smartHome/smart1.jpg">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="../../../assets/imgs/smartHome/smart2.jpg">
+                    </td>
+                    <td scope="row" class="texto">
+                        <div class="card border-dark rounded text-light bg-dark">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    Philips Hue White Ambiance Kit 2 Bombillas LED Inteligente E27 Blanco Cálido a Frío
+                                </h5>
+                                <p class="card-text">
+                                    Kit Philips Hue White Ambiance con 2 bombillas inteligentes, puente 
+                                    y mando, compatible tanto con tecnologia Zigbee. Controla las luces 
+                                    de tu casa desde la App Philips Hue. Las bombillas inteligentes 
+                                    Philips Hue también son compatibles con los asistentes de voz Google 
+                                    Home, Alexa. Solo tienes que conectar el puente a la misma red wifi 
+                                    que él altavoz inteligente. 
+                                </p>
+                                <p class="card-footer text-center">
+                                    {{119.95 | euro}}
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="texto">
+                        <div class="card border-dark rounded text-light bg-dark">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Prixton EW10 Enchufe WiFi Inteligente</h5>
+                              <p class="card-text">
+                                Prixton EW10 enchufe wifi te permite controlar el encendido y 
+                                el apagado de los aparatos eléctricos de tu hogar de manera 
+                                remota mediante una app gratuita. Podrás programar diaria y 
+                                semanalmente el funcionamiento de tus dispositivos. Por ejemplo, 
+                                el apagado de una luz cuando vayas a dormir o el encendido de un 
+                                ventilador al llegar a casa.
+                            </p>
+                            <p class="card-footer text-center">
+                                {{14.95 | euro}}
+                            </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td scope="row">
+                        <img src="../../../assets/imgs/smartHome/smart3.jpg">
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
